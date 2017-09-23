@@ -1,0 +1,180 @@
+
+@font-face {
+    font-family: "Din Condensed";
+    src: url(../fonts/FF_DIN_Condensed_Regular.otf) format("opentype");
+	font-weight: normal;
+}
+
+@font-face {
+    font-family: "Din Condensed";
+    src: url(../fonts/FF_DIN_Condensed_Bold.otf) format("opentype");
+	font-weight: bold;
+}
+
+@font-face {
+    font-family: "Din Condensed";
+    src: url(../fonts/FF_DIN_Condensed_Light.otf) format("opentype");
+	font-weight: light;
+}
+
+body { 
+    font-family: "Din Condensed", sans-serif;
+	font-weight: normal;
+	line-height: 1.5;
+}
+
+
+header {
+	background: url('../img/header-bg.jpg') top center / cover no-repeat;
+	color: #fff;
+	padding: 40px;
+}
+
+.jumbotron {
+	background: none;
+	padding: 7rem 0rem;
+}
+
+header h1.display-1 {
+    font-size: 170px;
+    font-weight: bold;
+    letter-spacing: 200px;
+	margin: 80px 0 70px;
+}
+
+header .icons {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+	display: flex;
+}
+
+header .icons div {
+    float: left;
+    width: 50%;
+}
+
+
+
+header .icons img {
+	margin: 20px 50px;
+}
+
+header .nav-item { margin: 10px;}
+header a {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+header .nav-item a:hover  {color: #f0f0f0;}
+
+header h3 {
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 16px;
+}
+
+header .cta {margin: 100px 0;}
+
+header .cta a.btn {
+    border: 2px solid #fff;
+    padding: 40px 80px;
+    color: #fff;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 6px;
+}
+
+.navbar-dark {
+	border-color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {color: #fff;}
+
+@media screen and (max-width: 1440px) {
+	
+	header h1.display-1 {padding-left: 120px; letter-spacing: 120px;}
+	
+}
+
+
+@media screen and (max-width: 1200px) {
+	
+	header h1.display-1 {padding-left: 80px; letter-spacing: 80px;}
+	
+}
+
+@media screen and (max-width: 980px) {
+	
+	header h1.display-1 {padding-left: 60px; letter-spacing: 60px;}
+	
+}
+
+
+@media screen and (max-width: 750px) {
+	
+	
+	header {padding: 20px;}
+	header .icons {display: block;}
+	header .icons div {
+		float: none;
+		width: 100%;
+	}
+		header .icons img { margin: 10px 0;}
+	
+	header h1.display-1 {letter-spacing: 20px; padding: 0;}
+	
+}
+
+@media screen and (max-width: 600px) {
+	
+	header {padding: 10px;}
+	
+	header h1.display-1 {letter-spacing: 10px; padding: 0;}
+	
+}
+
+@media screen and (max-width: 480px) {
+	
+	
+	/* header {padding: 5px;}
+	header .icons {display: block;}
+	header .icons div {
+		float: none;
+		width: 100%;
+	}
+	
+	header h1.display-1 {letter-spacing: 2px;}
+	
+}
+
+@media screen and (max-width: 320px) {*/
+	
+	header {padding: 5px;} 
+	
+	.jumbotron {
+		background: none;
+		padding: 1rem 0rem;
+	}
+	header .icons img { margin: 10px 0;}
+	
+	header h1.display-1 {letter-spacing: 2px; padding: 0; font-size: 120px; margin: 30px 0;}
+	
+	header .cta {margin: 30px 0;}
+	
+	header .cta a.btn {
+		border: 2px solid #fff;
+		padding: 20px;
+		color: #fff;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		font-size: 20px;
+		font-weight: bold;
+		letter-spacing: 3px;
+	}
+	
+}
