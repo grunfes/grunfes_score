@@ -21,11 +21,41 @@ body {
     font-family: "Din Condensed", sans-serif;
 	font-weight: normal;
 	line-height: 1.5;
+	font-size: 18px;
+	background: #f8f8f8;
 }
 
+a, a:hover {
+	transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	text-decoration: none;
+	color: #999;
+}
+
+p, h1, h2, h3, h4 {
+	line-height: 1.5;
+	margin: 5px 0 10px;
+	font-weight: bold;
+}
+
+h1, h2, h3, h4 {text-transform: uppercase;}
+
+p { color: #7c848b; }
+
+.display-1 {font-size: 56px; line-height: 2; font-weight:bold; color: #121416;}
+.display-2 {font-size: 42px; line-height: 2; font-weight:bold; color: #121416;}
+.display-3 {font-size: 36px; line-height: 1.5; font-weight:bold; color: #121416;}
+.display-4 {font-size: 28px; line-height: 1.5; font-weight:bold; color: #121416;}
+.display-5 {font-size: 24px; line-height: 1.5; font-weight:bold; color: #121416;}
+
+img {
+	width: initial;
+	max-width: 100%;
+	height: auto;
+}
 
 header {
-	background: url('../img/header-bg.jpg') top center / cover no-repeat;
+	background: url('../img/header-bg.jpg') fixed top center / cover no-repeat;
 	color: #fff;
 	padding: 40px;
 }
@@ -40,6 +70,7 @@ header h1.display-1 {
     font-weight: bold;
     letter-spacing: 200px;
 	margin: 80px 0 70px;
+	color: #fff;
 }
 
 header .icons {
@@ -76,6 +107,14 @@ header h3 {
 	letter-spacing: 16px;
 }
 
+.btn {
+    border: 2px solid;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+	padding: 10px 15px;
+	text-transform: uppercase;
+}
+
 header .cta {margin: 100px 0;}
 
 header .cta a.btn {
@@ -89,33 +128,176 @@ header .cta a.btn {
     letter-spacing: 6px;
 }
 
+
 .navbar-dark {
 	border-color: #fff;
 }
 
 .navbar-dark .navbar-nav .nav-link {color: #fff;}
 
-@media screen and (max-width: 1440px) {
+section { display: flex; margin: 6rem auto;}
+
+section.section1 {
+	background: #fff;
+	padding: 8rem;
+	margin: -4rem 4rem 4rem;
+}
+
+section.section1 .container {
+	max-width: 960px;
+}
+section.section1 h3.display-3 {
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+
+section.section1 p {
+	letter-spacing: 1px;
+	padding: 4% 4% 0 4%;
+}
+
+section.section2 .display-3 {
+	font-size: 36px;
+	margin-bottom: 4rem;
+	text-align: center;
+	letter-spacing: 10px;
+}
+
+section.section2 p {
+	margin: 2rem 0 4rem;
+}
+
+section.section2 .cta {text-align: center;}
+
+section.section2 .btn {
+	border-color: #d7d7d7; 
+	color: #000;
+	padding: 1rem 4rem;
+} 
+
+section.section3 {
+	background: url('../img/section3bg.jpg') no-repeat scroll right top / cover;
+	padding: 5rem 0;
+}
+
+section.section3 li {
+    clear: both;
+    color: #000;
+    cursor: pointer;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.3;
+    list-style: outside none none;
+    margin: 5px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out 0s;
+    -webkit-transition: color 0.3s ease-in-out 0s;
+}
+
+section.section3 li:hover, section.section3 li.current{
+	color: #fff;
+	background: #000;
+}
+
+section.section3 p {color: #000;}
+
+.tab-content {
+	display: none; 
+	font-size: 30px; 
+	opacity: 0;
+    transition: color 0.3s ease-in-out 0s;
+    -webkit-transition: color 0.3s ease-in-out 0s;
+}
+.tab-content.current {display: block; opacity: 1;}
+
+
+
+
+/*** MOBILES ***/
+
+@media screen and (max-width: 720px) {
+	
+	section.section2 .cta {text-align: center;}
+	section.section3 {padding: 5rem 0;}
+	
+}
+
+
+
+
+/*** Extra Wide ****/
+
+@media screen and (min-width: 1441px) {
+	
+	section.section2 .cta {text-align: left;}
+	
+	section.section3 {
+		background: url('../img/section3bg.jpg') no-repeat scroll right top;
+		padding: 10rem 0;
+	}
+	
+}
+
+
+
+
+/*** WIDE ***/
+
+@media screen and (min-width: 1199px) and (max-width: 1440px) {
 	
 	header h1.display-1 {padding-left: 120px; letter-spacing: 120px;}
-	
+	section.section1 p {
+		letter-spacing: 1px;
+		padding: 4% 8% 0 8%;
+	}
+	section.section2 .cta {text-align: left;}
+	section.section3 {
+		background: url('../img/section3bg.jpg') no-repeat scroll right top / 70% auto;
+		padding: 5rem 0;
+	}
 }
 
 
-@media screen and (max-width: 1200px) {
+
+
+/*** DESKTOP ***/
+
+@media screen and (min-width: 961px) and (max-width: 1280px) {
 	
 	header h1.display-1 {padding-left: 80px; letter-spacing: 80px;}
+	section.section1 h3.display-3 {
+		letter-spacing: 8px;
+	}
+	section.section1 {
+		padding: 6rem;
+		margin: -3rem 3rem 3rem;
+	}
+	section.section2 .cta {text-align: left;}
 	
+
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (min-width: 721px) and (max-width: 960px) {
 	
 	header h1.display-1 {padding-left: 60px; letter-spacing: 60px;}
+	section.section1 h3.display-3 {
+		letter-spacing: 6px;
+	}	
+		
+	section.section1 {
+		padding: 4rem;
+		margin: -2rem 2rem 2rem;
+	}
+	section.section3 { padding: 5rem 0;	}
+
+
 	
 }
 
 
-@media screen and (max-width: 750px) {
+@media screen and (min-width: 601px) and (max-width: 720px) {
 	
 	
 	header {padding: 20px;}
@@ -124,45 +306,74 @@ header .cta a.btn {
 		float: none;
 		width: 100%;
 	}
-		header .icons img { margin: 10px 0;}
+	header .icons img { margin: 10px 0;}
 	
 	header h1.display-1 {letter-spacing: 20px; padding: 0;}
 	
+	section.section1 h3.display-3 {
+		letter-spacing: 6px;
+	}
+	
+	section.section1 {
+		padding: 4rem;
+		margin: -2rem 2rem 2rem;
+	}
+	
+	section.section3 { padding: 5rem 0;	}
+
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 481px) and (max-width: 600px) {
 	
 	header {padding: 10px;}
 	
-	header h1.display-1 {letter-spacing: 10px; padding: 0;}
+		header .icons  {
+		display:block;
+	}
 	
-}
-
-@media screen and (max-width: 480px) {
-	
-	
-	/* header {padding: 5px;}
-	header .icons {display: block;}
 	header .icons div {
 		float: none;
 		width: 100%;
 	}
+		header .icons img { margin: 10px 0;}
+	header h1.display-1 {letter-spacing: 10px; padding: 0;}
 	
-	header h1.display-1 {letter-spacing: 2px;}
+	section.section1 {
+		padding: 1rem;
+		margin: -1rem 1rem 1rem;
+	}
+	section.section1 h3.display-3 {
+		letter-spacing: 4px;
+	}
 	
 }
 
-@media screen and (max-width: 320px) {*/
+@media screen and (max-width: 480px) {
+
 	
-	header {padding: 5px;} 
+	header {padding: 5px; color: #fff;} 
 	
 	.jumbotron {
 		background: none;
 		padding: 1rem 0rem;
 	}
+	header .icons  {
+		display:block;
+	}
+	
+	header .icons div {
+		float: none;
+		width: 100%;
+	}
 	header .icons img { margin: 10px 0;}
 	
-	header h1.display-1 {letter-spacing: 2px; padding: 0; font-size: 120px; margin: 30px 0;}
+	header h1.display-1 {
+		letter-spacing: 2px; 
+		padding: 0; 
+		font-size: 120px; 
+		margin: 30px 0;
+		color: #fff;
+	}
 	
 	header .cta {margin: 30px 0;}
 	
@@ -177,4 +388,16 @@ header .cta a.btn {
 		letter-spacing: 3px;
 	}
 	
+	section.section1 h3.display-3 {
+		letter-spacing: 1px;
+	}
+	
+	section.section1 {
+		padding: 1rem;
+		margin: -1rem 1rem 1rem;
+	}
+	
+	section.section3 { padding: 5rem 0;	}
+	
+	section.section3 { padding: 5rem 0;	
 }
