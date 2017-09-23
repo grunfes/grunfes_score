@@ -30,7 +30,7 @@ header {
 	padding: 40px;
 }
 
-.jumbotron {
+header .jumbotron {
 	background: none;
 	padding: 7rem 0rem;
 }
